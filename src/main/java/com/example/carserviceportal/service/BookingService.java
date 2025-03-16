@@ -8,9 +8,11 @@ import com.example.carserviceportal.repository.BookingRepository;
 import com.example.carserviceportal.repository.UserRepository;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.function.Supplier;
 
+@Service
 public class BookingService {
     @Autowired
     private BookingRepository bookingRepository;
