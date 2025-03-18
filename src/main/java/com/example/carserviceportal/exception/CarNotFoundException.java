@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class CarNotFoundException extends RuntimeException {
-    public CarNotFoundException(int message) {
+    public CarNotFoundException(String message) {
         super(String.valueOf(message));
     }
 }
