@@ -3,6 +3,7 @@ package com.example.carserviceportal.service;
 import com.example.carserviceportal.dto.CarDTO;
 import com.example.carserviceportal.entity.Car;
 import com.example.carserviceportal.exception.CarNotFoundException;
+import com.example.carserviceportal.repository.BrandRepository;
 import com.example.carserviceportal.repository.CarRepository;
 import com.example.carserviceportal.repository.CategoryRepository;
 import com.example.carserviceportal.repository.UserRepository;
