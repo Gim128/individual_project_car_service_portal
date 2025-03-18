@@ -44,6 +44,11 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(PartsShopNotFoundException.class)
+    public ResponseEntity<String> handlePartsShopNotFoundException(PartsShopNotFoundException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(InvalidDataException.class)
     public ResponseEntity<String> handleInvalidDataException(InvalidDataException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
