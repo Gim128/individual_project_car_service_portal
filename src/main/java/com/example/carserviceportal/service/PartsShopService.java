@@ -3,8 +3,10 @@ package com.example.carserviceportal.service;
 import com.example.carserviceportal.dto.PartsShopDTO;
 import com.example.carserviceportal.entity.PartsShop;
 import com.example.carserviceportal.exception.InvalidDataException;
+import com.example.carserviceportal.exception.PartsShopNotFoundException;
 import com.example.carserviceportal.repository.BrandRepository;
 import com.example.carserviceportal.repository.PartsShopRepository;
+import com.example.carserviceportal.repository.SparePartRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

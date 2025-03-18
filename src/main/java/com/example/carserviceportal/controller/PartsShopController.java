@@ -2,6 +2,7 @@ package com.example.carserviceportal.controller;
 
 import com.example.carserviceportal.dto.PartsShopDTO;
 import com.example.carserviceportal.entity.PartsShop;
+import com.example.carserviceportal.service.PartsShopService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 public class PartsShopController {
     @Autowired
     private PartsShopController partsShopController;
+    @Autowired
+    private PartsShopService partsShopService;
 
     @PostMapping("/create")
     public ResponseEntity<PartsShop> createPartsShop(@Valid @RequestBody PartsShopDTO partsShopDTO) {
