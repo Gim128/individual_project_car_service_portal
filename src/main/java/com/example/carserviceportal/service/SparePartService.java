@@ -6,6 +6,7 @@ import com.example.carserviceportal.exception.InvalidDataException;
 import com.example.carserviceportal.exception.SparePartNotFoundException;
 import com.example.carserviceportal.repository.BrandRepository;
 import com.example.carserviceportal.repository.SparePartRepository;
+import com.example.carserviceportal.repository.SparePartsCategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
