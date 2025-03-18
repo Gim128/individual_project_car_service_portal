@@ -5,6 +5,7 @@ import com.example.carserviceportal.entity.Booking;
 import com.example.carserviceportal.exception.BookingNotFoundException;
 import com.example.carserviceportal.exception.CarNotFoundException;
 import com.example.carserviceportal.repository.BookingRepository;
+import com.example.carserviceportal.repository.CarRepository;
 import com.example.carserviceportal.repository.UserRepository;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +52,6 @@ public class BookingService {
 
     public Booking getBookingById(int booking_id) {
         return bookingRepository.findByBookingId(booking_id)
-                .orElseThrow(bookingNotFound(booking_id)); // ✅ Now it's a Supplier
+                .orElseThrow(bookingNotFound(booking_id));
     }
 }

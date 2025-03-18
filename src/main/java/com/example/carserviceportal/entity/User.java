@@ -39,5 +39,10 @@ public class User {
     @Positive(message = "mobile number must be positive")
     private int mobile;
 
+    @NotBlank(message = "Role is required")
+    private String role;
+
     private boolean is_active = true;
+
+
 }

@@ -26,4 +26,9 @@ public class AdminController {
         AdminUser adminUser = adminService.getAdminByEmail(admin_email);
         return new ResponseEntity<>(adminUser, HttpStatus.OK);
     }
+
+    @GetMapping("/admin/dashboard")
+    public String adminDashboard() {
+        return "admin-dashboard";
+    }
 }
