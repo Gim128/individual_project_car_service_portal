@@ -38,8 +38,14 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleCategoryNotFoundException(CategoryNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
+
     @ExceptionHandler(PaymentNotFoundException.class)
     public ResponseEntity<String> handlePaymentNotFoundException(PaymentNotFoundException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(ServiceCenterNotFoundException.class)
+    public ResponseEntity<String> handleServiceCenterNotFoundException(ServiceCenterNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
