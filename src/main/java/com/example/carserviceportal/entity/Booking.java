@@ -8,6 +8,8 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.Data;
 
+import java.util.Date;
+
 @Entity
 @Data
 public class Booking {
@@ -26,7 +28,7 @@ public class Booking {
     private double booking_price;
 
     @NotNull(message = "Booking date is required")
-    private Data booking_date;
+    private Date booking_date;
     @Id
     private Long id;
 
@@ -39,5 +41,9 @@ public class Booking {
     }
 
     public Booking orElseThrow(Object o) {
+        if (o instanceof RuntimeException) {
+            throw (RuntimeException) o;
+        }
+        throw new IllegalArgumentException("Invalid object passed: " + o);
     }
 }

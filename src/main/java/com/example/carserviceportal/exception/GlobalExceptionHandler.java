@@ -43,6 +43,11 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(ReviewNotFoundException.class)
+    public ResponseEntity<String> handleReviewNotFoundException(ReviewNotFoundException ex) {
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(BrandNotFoundException.class)
     public ResponseEntity<String> handleBrandNotFoundException(BrandNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);

@@ -19,7 +19,7 @@ public class AdminDTO {
     @Setter
     @NotBlank(message = "Admin email is requied")
     @Email(message = "Invalid email format")
-    private String admin_Email;
+    private String admin_email;
 
     @Getter
     @Setter

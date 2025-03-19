@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/admins")
 public class AdminController {
@@ -22,8 +24,8 @@ public class AdminController {
     }
 
     @GetMapping("/{admin_email}")
-    public ResponseEntity<AdminUser> getAdminByEmail(@PathVariable String admin_email){
-        AdminUser adminUser = adminService.getAdminByEmail(admin_email);
+    public ResponseEntity<Optional<AdminUser>> getAdminByEmail(@PathVariable String admin_email){
+        Optional<AdminUser> adminUser = adminService.getAdminByEmail(admin_email);
         return new ResponseEntity<>(adminUser, HttpStatus.OK);
     }
 

@@ -5,7 +5,11 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Data
 public class SparePartsCategoryDTO {
     @NotBlank(message = "Spare part name is required")
@@ -27,4 +31,7 @@ public class SparePartsCategoryDTO {
     @NotNull(message = "Spare part quantity is required")
     @PositiveOrZero(message = "Quantity must be positive or zero")
     private int spare_part_qty;
+
+
+
 }

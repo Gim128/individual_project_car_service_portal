@@ -11,6 +11,7 @@ import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.function.Supplier;
 
 @Service
@@ -41,7 +42,7 @@ public class BookingService {
         booking.setCar_id(bookingDTO.getCar_id());
         booking.setUser_id(bookingDTO.getUser_id());
         booking.setBooking_price(bookingDTO.getBooking_price());
-        booking.setBooking_date((Data) bookingDTO.getBooking_date());
+        booking.setBooking_date((Date) bookingDTO.getBooking_date());
 
         return bookingRepository.save(booking);
     }

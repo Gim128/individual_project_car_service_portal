@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface SparePartsCategoryRepository extends JpaRepository<SparePartRepository, Integer> {
-    Optional<SparePart> findBySparePartCategoryName(String spare_part_category_name);
+public interface SparePartsCategoryRepository extends JpaRepository<SparePartsCategory, Integer> {
+    Optional<SparePartsCategory> findBySparePartCategoryName(String spare_part_category_name);
 }
